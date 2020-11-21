@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ATM.Object;
 
 namespace ATM
 {
@@ -56,6 +57,11 @@ namespace ATM
         }
 
         private void MainFunction_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }

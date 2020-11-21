@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ATM.Object;
 
 namespace ATM
 {
@@ -16,10 +19,15 @@ namespace ATM
             string queryAccount = "SELECT * FROM [Account] WHERE UserID ='" + user.UserId + "'";
             try
             {
-                conn.Open();
-                SqlCommand command = conn.CreateCommand();
-                command.CommandText = queryAccount;
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(queryAccount, conn);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "Accound");
+                conn.Close();
+                Console.WriteLine(dataSet);
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.Message.ToString());
             }
         }
     }

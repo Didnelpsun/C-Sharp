@@ -11,8 +11,11 @@ namespace ATM
     {
         public static SqlConnection Connection()
         {
-            string connectStr = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=atm;Integrated Security=True";
-            return new SqlConnection(connectStr);
+            return new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=atm;Integrated Security=True");
+        }
+        public static SqlConnection Connection(String s)
+        {
+            return new SqlConnection(s);
         }
     }
 }

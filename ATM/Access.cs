@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace ATM
 {
-    public partial class Account : Form
+    // 存取款
+    public partial class Access : Form
     {
-        public Account()
+        public Access()
         {
             InitializeComponent();
+        }
+
+        private void Access_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

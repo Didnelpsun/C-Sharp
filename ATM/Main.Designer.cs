@@ -35,6 +35,9 @@ namespace ATM
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.labelPsw = new System.Windows.Forms.Label();
             this.textBoxPsw = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // login
@@ -98,6 +101,26 @@ namespace ATM
             this.textBoxPsw.TabIndex = 4;
             this.textBoxPsw.TextChanged += new System.EventHandler(this.TextBoxPsw_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(463, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.SystemColors.Control;
+            this.linkLabel1.Location = new System.Drawing.Point(508, 257);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(65, 12);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -107,6 +130,8 @@ namespace ATM
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(585, 310);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxPsw);
             this.Controls.Add(this.labelPsw);
             this.Controls.Add(this.textBoxUser);
@@ -118,6 +143,7 @@ namespace ATM
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "自助存取款系统";
             this.TransparencyKey = System.Drawing.Color.Black;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +156,8 @@ namespace ATM
         private System.Windows.Forms.TextBox textBoxUser;
         private System.Windows.Forms.Label labelPsw;
         private System.Windows.Forms.TextBox textBoxPsw;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
