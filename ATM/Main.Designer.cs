@@ -53,6 +53,7 @@ namespace ATM
             this.login.TabIndex = 0;
             this.login.Text = "登录";
             this.login.UseVisualStyleBackColor = false;
+            this.login.Click += new System.EventHandler(this.Login_Click);
             // 
             // labelUser
             // 
@@ -65,7 +66,6 @@ namespace ATM
             this.labelUser.Size = new System.Drawing.Size(56, 16);
             this.labelUser.TabIndex = 1;
             this.labelUser.Text = "用户名";
-            this.labelUser.Click += new System.EventHandler(this.labelUser_Click);
             // 
             // textBoxUser
             // 
@@ -74,6 +74,7 @@ namespace ATM
             this.textBoxUser.Name = "textBoxUser";
             this.textBoxUser.Size = new System.Drawing.Size(229, 26);
             this.textBoxUser.TabIndex = 2;
+            this.textBoxUser.TextChanged += new System.EventHandler(this.TextBoxUser_TextChanged);
             // 
             // labelPsw
             // 
@@ -95,6 +96,7 @@ namespace ATM
             this.textBoxPsw.Name = "textBoxPsw";
             this.textBoxPsw.Size = new System.Drawing.Size(229, 26);
             this.textBoxPsw.TabIndex = 4;
+            this.textBoxPsw.TextChanged += new System.EventHandler(this.TextBoxPsw_TextChanged);
             // 
             // Main
             // 
@@ -103,7 +105,7 @@ namespace ATM
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.ClientSize = new System.Drawing.Size(585, 310);
             this.ControlBox = false;
             this.Controls.Add(this.textBoxPsw);
             this.Controls.Add(this.labelPsw);
@@ -116,7 +118,6 @@ namespace ATM
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "自助存取款系统";
             this.TransparencyKey = System.Drawing.Color.Black;
-            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

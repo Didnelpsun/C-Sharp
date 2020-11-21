@@ -163,7 +163,7 @@ namespace ATM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.ClientSize = new System.Drawing.Size(569, 271);
             this.ControlBox = false;
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
@@ -177,9 +177,13 @@ namespace ATM
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFunction";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "主要功能分区";
+            this.Load += new System.EventHandler(this.MainFunction_Load);
             this.ResumeLayout(false);
 
         }
