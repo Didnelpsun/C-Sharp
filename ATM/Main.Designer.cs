@@ -114,12 +114,12 @@ namespace ATM
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.ForeColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.Control;
-            this.linkLabel1.Location = new System.Drawing.Point(508, 257);
+            this.linkLabel1.Location = new System.Drawing.Point(461, 258);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(65, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(53, 12);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.Text = "忘记密码";
             // 
             // Main
             // 
