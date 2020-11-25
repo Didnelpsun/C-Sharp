@@ -12,23 +12,24 @@ namespace ATM
 {
     partial class DAO
     {
-        public static void GetAccount(User user)
+        public static DataSet GetAccount(User user)
         {
             SqlConnection conn = DAO.Connection();
             // 查询对应ID下的多个账户
-            string queryAccount = "SELECT * FROM [Account] WHERE UserID ='" + user.UserId + "'";
+            string queryAccount = "SELECT AccountID, AccountName, AccountBank, AccountType, Balance, Grade FROM [Account] WHERE UserID ='" + user.UserId + "'";
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(queryAccount, conn);
                 DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet, "Accound");
+                dataAdapter.Fill(dataSet, "Account");
                 conn.Close();
-                Console.WriteLine(dataSet);
+                return dataSet;
             }
             catch(Exception e)
             {
                 Debug.WriteLine(e.Message.ToString());
             }
+            return new DataSet();
         }
     }
 }

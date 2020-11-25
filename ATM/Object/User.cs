@@ -12,7 +12,6 @@ namespace ATM.Object
         private string userid;
         private string username;
         private string password;
-        public ArrayList Account = new ArrayList();
         public string UserId
         {
             set
@@ -51,7 +50,6 @@ namespace ATM.Object
             userid = "";
             username = "";
             password = "";
-            Account = null;
         }
     }
 }

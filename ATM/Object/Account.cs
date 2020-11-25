@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ATM.Object
 {
-    class Account
+    public class Account
     {
         private string accountid;
         private string accountname;
@@ -14,6 +14,7 @@ namespace ATM.Object
         private bool accounttype;
         private float balance;
         private int grade;
+        private string userid;
         public string AccountID
         {
             set
@@ -80,6 +81,17 @@ namespace ATM.Object
                 return grade;
             }
         }
+        public string UserID
+        {
+            set
+            {
+                userid = value.ToString();
+            }
+            get
+            {
+                return userid;
+            }
+        }
         public Account()
         {
             accountid = null;
@@ -88,6 +100,17 @@ namespace ATM.Object
             accounttype = false;
             balance = 0;
             grade = 0;
+            userid = null;
+        }
+        public Account(string id, string name, string bank, bool type, float bal, int g, string uid)
+        {
+            accountid = id;
+            accountname = name;
+            accountbank = bank;
+            accounttype = type;
+            balance = bal;
+            grade = g;
+            userid = uid;
         }
     }
 }

@@ -46,62 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Access.cs">
+    <Compile Include="Forms\AccountBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Access.Designer.cs">
-      <DependentUpon>Access.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Account.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
+    <Compile Include="Forms\AccountBoard.Designer.cs">
+      <DependentUpon>AccountBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\Account.cs" />
     <Compile Include="DAO\Connection.cs" />
     <Compile Include="DAO\GetAccount.cs" />
     <Compile Include="DAO\Login.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainFunction.cs">
+    <Compile Include="Forms\MainFunction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFunction.Designer.cs">
+    <Compile Include="Forms\MainFunction.Designer.cs">
       <DependentUpon>MainFunction.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Object\User.cs" />
-    <EmbeddedResource Include="Access.resx">
-      <DependentUpon>Access.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AccountBoard.resx">
+      <DependentUpon>AccountBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFunction.resx">
+    <EmbeddedResource Include="Forms\MainFunction.resx">
       <DependentUpon>MainFunction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -112,10 +104,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\" />
+    <None Include="Resources\Icon1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
+    <None Include="assets\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
