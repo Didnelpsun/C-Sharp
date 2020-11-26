@@ -11,7 +11,6 @@ namespace ATM.Forms
         {
             InitializeComponent();
             this.user = user;
-            MessageBox.Show("欢迎"+ user.UserName + "登入", "自助存取款系统");
         }
         private void MainFunction_Load(object sender, EventArgs e)
         {
@@ -48,6 +47,11 @@ namespace ATM.Forms
             Visible = false;
             AccountBoard accountBoard = new AccountBoard(account);
             accountBoard.Show();
+        }
+
+        private void ChangePass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\GetGradeName.cs" />
+    <Compile Include="DAO\CheckUser.cs" />
     <Compile Include="Forms\AccountBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AccountBoard.Designer.cs">
       <DependentUpon>AccountBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\Account.cs" />
     <Compile Include="DAO\Connection.cs" />
@@ -71,8 +79,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Object\User.cs" />
+    <Compile Include="Utils\CheckValue.cs" />
+    <Compile Include="Utils\GetValue.cs" />
     <EmbeddedResource Include="Forms\AccountBoard.resx">
       <DependentUpon>AccountBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -104,13 +117,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="assets\exit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\password.png" />
@@ -118,5 +125,6 @@
   <ItemGroup>
     <None Include="assets\user.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

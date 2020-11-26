@@ -47,9 +47,15 @@ namespace ATM.Object
         }
         public User()
         {
-            userid = "";
-            username = "";
-            password = "";
+            userid = null;
+            username = null;
+            password = null;
+        }
+        public User(string id)
+        {
+            userid = id;
+            username = null;
+            password = null;
         }
     }
 }

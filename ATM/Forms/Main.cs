@@ -37,6 +37,7 @@ namespace ATM.Forms
                     MainFunction mainFunction = new MainFunction(user);
                     mainFunction.Show();
                     Visible = false;
+                    MessageBox.Show("欢迎" + user.UserName + "登入", "自助存取款系统");
                     break;
             }
         }
@@ -44,6 +45,13 @@ namespace ATM.Forms
         private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ForgetPsw_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ForgetPassword forgetPassword = new ForgetPassword();
+            forgetPassword.Show();
         }
     }
 }

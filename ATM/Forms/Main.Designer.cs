@@ -36,6 +36,7 @@ namespace ATM.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.forgetPsw = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,8 +76,8 @@ namespace ATM.Forms
             this.textBoxPsw.Location = new System.Drawing.Point(199, 148);
             this.textBoxPsw.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxPsw.Name = "textBoxPsw";
-            this.textBoxPsw.Size = new System.Drawing.Size(229, 26);
             this.textBoxPsw.PasswordChar = '*';
+            this.textBoxPsw.Size = new System.Drawing.Size(229, 26);
             this.textBoxPsw.TabIndex = 4;
             this.textBoxPsw.TextChanged += new System.EventHandler(this.TextBoxPsw_TextChanged);
             // 
@@ -104,12 +105,23 @@ namespace ATM.Forms
             // 
             this.pictureBox3.Image = global::ATM.Properties.Resources.exit;
             this.pictureBox3.Location = new System.Drawing.Point(545, 12);
-            this.pictureBox3.Name = "exit";
+            this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(25, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // forgetPsw
+            // 
+            this.forgetPsw.AutoSize = true;
+            this.forgetPsw.ForeColor = System.Drawing.Color.White;
+            this.forgetPsw.Location = new System.Drawing.Point(403, 245);
+            this.forgetPsw.Name = "forgetPsw";
+            this.forgetPsw.Size = new System.Drawing.Size(65, 12);
+            this.forgetPsw.TabIndex = 8;
+            this.forgetPsw.Text = "忘记密码？";
+            this.forgetPsw.Click += new System.EventHandler(this.ForgetPsw_Click);
             // 
             // Main
             // 
@@ -119,6 +131,7 @@ namespace ATM.Forms
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(585, 310);
             this.ControlBox = false;
+            this.Controls.Add(this.forgetPsw);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -147,6 +160,7 @@ namespace ATM.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label forgetPsw;
     }
 }
 

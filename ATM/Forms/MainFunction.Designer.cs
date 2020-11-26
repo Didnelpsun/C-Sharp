@@ -32,7 +32,7 @@ namespace ATM.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFunction));
             this.changePass = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.AddAccountButton = new System.Windows.Forms.Button();
             this.accountView = new System.Windows.Forms.DataGridView();
             this.logout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountView)).BeginInit();
@@ -51,6 +51,7 @@ namespace ATM.Forms
             this.changePass.TabIndex = 0;
             this.changePass.Text = "密码修改";
             this.changePass.UseVisualStyleBackColor = false;
+            this.changePass.Click += new System.EventHandler(this.ChangePass_Click);
             // 
             // button5
             // 
@@ -66,19 +67,19 @@ namespace ATM.Forms
             this.button5.Text = "用户名修改";
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // AddAccountButton
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(46, 266);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "新增账户";
-            this.button6.UseVisualStyleBackColor = false;
+            this.AddAccountButton.BackColor = System.Drawing.Color.White;
+            this.AddAccountButton.FlatAppearance.BorderSize = 0;
+            this.AddAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddAccountButton.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.AddAccountButton.Location = new System.Drawing.Point(46, 266);
+            this.AddAccountButton.Margin = new System.Windows.Forms.Padding(0);
+            this.AddAccountButton.Name = "AddAccountButton";
+            this.AddAccountButton.Size = new System.Drawing.Size(75, 23);
+            this.AddAccountButton.TabIndex = 5;
+            this.AddAccountButton.Text = "新增账户";
+            this.AddAccountButton.UseVisualStyleBackColor = false;
             // 
             // accountView
             // 
@@ -89,7 +90,7 @@ namespace ATM.Forms
             this.accountView.RowTemplate.Height = 23;
             this.accountView.Size = new System.Drawing.Size(561, 237);
             this.accountView.TabIndex = 6;
-            this.accountView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountView_CellContentClick);
+            this.accountView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountView_CellContentClick);
             // 
             // logout
             // 
@@ -116,7 +117,7 @@ namespace ATM.Forms
             this.ControlBox = false;
             this.Controls.Add(this.logout);
             this.Controls.Add(this.accountView);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.AddAccountButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.changePass);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -135,7 +136,7 @@ namespace ATM.Forms
 
         private System.Windows.Forms.Button changePass;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button AddAccountButton;
         private System.Windows.Forms.DataGridView accountView;
         private System.Windows.Forms.Button logout;
     }

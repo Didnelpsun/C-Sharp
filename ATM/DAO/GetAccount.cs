@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ATM.Object;
 
 namespace ATM
@@ -28,8 +24,8 @@ namespace ATM
             catch(Exception e)
             {
                 Debug.WriteLine(e.Message.ToString());
+                return new DataSet();
             }
-            return new DataSet();
         }
     }
 }

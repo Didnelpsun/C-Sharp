@@ -29,173 +29,238 @@ namespace ATM.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.AccountIDLabel = new System.Windows.Forms.Label();
-            this.AccountNameLabel = new System.Windows.Forms.Label();
-            this.AccountID = new System.Windows.Forms.Label();
-            this.AccountName = new System.Windows.Forms.Label();
-            this.AccountBankLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AccountBank = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountBoard));
+            this.accountIDLabel = new System.Windows.Forms.Label();
+            this.accountNameLabel = new System.Windows.Forms.Label();
+            this.accountID = new System.Windows.Forms.Label();
+            this.accountName = new System.Windows.Forms.Label();
+            this.accountBankLabel = new System.Windows.Forms.Label();
+            this.accountTypeLabel = new System.Windows.Forms.Label();
+            this.balanceLabel = new System.Windows.Forms.Label();
+            this.gradeLabel = new System.Windows.Forms.Label();
+            this.accountBank = new System.Windows.Forms.Label();
+            this.accountType = new System.Windows.Forms.Label();
+            this.balance = new System.Windows.Forms.Label();
+            this.grade = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
+            this.deposit = new System.Windows.Forms.Button();
+            this.withdraw = new System.Windows.Forms.Button();
+            this.transfer = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AccountIDLabel
+            // accountIDLabel
             // 
-            this.AccountIDLabel.AutoSize = true;
-            this.AccountIDLabel.BackColor = System.Drawing.Color.Black;
-            this.AccountIDLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountIDLabel.ForeColor = System.Drawing.Color.White;
-            this.AccountIDLabel.Location = new System.Drawing.Point(75, 69);
-            this.AccountIDLabel.Name = "AccountIDLabel";
-            this.AccountIDLabel.Size = new System.Drawing.Size(72, 16);
-            this.AccountIDLabel.TabIndex = 0;
-            this.AccountIDLabel.Text = "账户ID：";
+            this.accountIDLabel.AutoSize = true;
+            this.accountIDLabel.BackColor = System.Drawing.Color.Black;
+            this.accountIDLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountIDLabel.ForeColor = System.Drawing.Color.White;
+            this.accountIDLabel.Location = new System.Drawing.Point(75, 69);
+            this.accountIDLabel.Name = "accountIDLabel";
+            this.accountIDLabel.Size = new System.Drawing.Size(72, 16);
+            this.accountIDLabel.TabIndex = 0;
+            this.accountIDLabel.Text = "账户ID：";
             // 
-            // AccountNameLabel
+            // accountNameLabel
             // 
-            this.AccountNameLabel.AutoSize = true;
-            this.AccountNameLabel.BackColor = System.Drawing.Color.Black;
-            this.AccountNameLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountNameLabel.ForeColor = System.Drawing.Color.White;
-            this.AccountNameLabel.Location = new System.Drawing.Point(321, 69);
-            this.AccountNameLabel.Name = "AccountNameLabel";
-            this.AccountNameLabel.Size = new System.Drawing.Size(72, 16);
-            this.AccountNameLabel.TabIndex = 1;
-            this.AccountNameLabel.Text = "账户名：";
+            this.accountNameLabel.AutoSize = true;
+            this.accountNameLabel.BackColor = System.Drawing.Color.Black;
+            this.accountNameLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountNameLabel.ForeColor = System.Drawing.Color.White;
+            this.accountNameLabel.Location = new System.Drawing.Point(321, 69);
+            this.accountNameLabel.Name = "accountNameLabel";
+            this.accountNameLabel.Size = new System.Drawing.Size(72, 16);
+            this.accountNameLabel.TabIndex = 1;
+            this.accountNameLabel.Text = "账户名：";
             // 
-            // AccountID
+            // accountID
             // 
-            this.AccountID.AutoSize = true;
-            this.AccountID.BackColor = System.Drawing.Color.Black;
-            this.AccountID.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountID.ForeColor = System.Drawing.Color.White;
-            this.AccountID.Location = new System.Drawing.Point(170, 69);
-            this.AccountID.Name = "AccountID";
-            this.AccountID.Size = new System.Drawing.Size(88, 16);
-            this.AccountID.TabIndex = 2;
-            this.AccountID.Text = "0000000000";
+            this.accountID.AutoSize = true;
+            this.accountID.BackColor = System.Drawing.Color.Black;
+            this.accountID.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountID.ForeColor = System.Drawing.Color.White;
+            this.accountID.Location = new System.Drawing.Point(170, 69);
+            this.accountID.Name = "accountID";
+            this.accountID.Size = new System.Drawing.Size(88, 16);
+            this.accountID.TabIndex = 2;
+            this.accountID.Text = "0000000000";
             // 
-            // AccountName
+            // accountName
             // 
-            this.AccountName.AutoSize = true;
-            this.AccountName.BackColor = System.Drawing.Color.Black;
-            this.AccountName.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountName.ForeColor = System.Drawing.Color.White;
-            this.AccountName.Location = new System.Drawing.Point(398, 69);
-            this.AccountName.Name = "AccountName";
-            this.AccountName.Size = new System.Drawing.Size(48, 16);
-            this.AccountName.TabIndex = 3;
-            this.AccountName.Text = "admin";
+            this.accountName.AutoSize = true;
+            this.accountName.BackColor = System.Drawing.Color.Black;
+            this.accountName.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountName.ForeColor = System.Drawing.Color.White;
+            this.accountName.Location = new System.Drawing.Point(397, 57);
+            this.accountName.Name = "accountName";
+            this.accountName.Size = new System.Drawing.Size(48, 16);
+            this.accountName.TabIndex = 3;
+            this.accountName.Text = "admin";
             // 
-            // AccountBankLabel
+            // accountBankLabel
             // 
-            this.AccountBankLabel.AutoSize = true;
-            this.AccountBankLabel.BackColor = System.Drawing.Color.Black;
-            this.AccountBankLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountBankLabel.ForeColor = System.Drawing.Color.White;
-            this.AccountBankLabel.Location = new System.Drawing.Point(63, 130);
-            this.AccountBankLabel.Name = "AccountBankLabel";
-            this.AccountBankLabel.Size = new System.Drawing.Size(88, 16);
-            this.AccountBankLabel.TabIndex = 4;
-            this.AccountBankLabel.Text = "账户银行：";
+            this.accountBankLabel.AutoSize = true;
+            this.accountBankLabel.BackColor = System.Drawing.Color.Black;
+            this.accountBankLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountBankLabel.ForeColor = System.Drawing.Color.White;
+            this.accountBankLabel.Location = new System.Drawing.Point(63, 130);
+            this.accountBankLabel.Name = "accountBankLabel";
+            this.accountBankLabel.Size = new System.Drawing.Size(88, 16);
+            this.accountBankLabel.TabIndex = 4;
+            this.accountBankLabel.Text = "账户银行：";
             // 
-            // label6
+            // accountTypeLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(305, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "是否为信用卡：";
+            this.accountTypeLabel.AutoSize = true;
+            this.accountTypeLabel.BackColor = System.Drawing.Color.Black;
+            this.accountTypeLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountTypeLabel.ForeColor = System.Drawing.Color.White;
+            this.accountTypeLabel.Location = new System.Drawing.Point(305, 130);
+            this.accountTypeLabel.Name = "accountTypeLabel";
+            this.accountTypeLabel.Size = new System.Drawing.Size(120, 16);
+            this.accountTypeLabel.TabIndex = 5;
+            this.accountTypeLabel.Text = "是否为信用卡：";
             // 
-            // label7
+            // balanceLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Black;
-            this.label7.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(91, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "余额：";
+            this.balanceLabel.AutoSize = true;
+            this.balanceLabel.BackColor = System.Drawing.Color.Black;
+            this.balanceLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.balanceLabel.ForeColor = System.Drawing.Color.White;
+            this.balanceLabel.Location = new System.Drawing.Point(91, 188);
+            this.balanceLabel.Name = "balanceLabel";
+            this.balanceLabel.Size = new System.Drawing.Size(56, 16);
+            this.balanceLabel.TabIndex = 6;
+            this.balanceLabel.Text = "余额：";
             // 
-            // label8
+            // gradeLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Black;
-            this.label8.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(305, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "账户等级:";
+            this.gradeLabel.AutoSize = true;
+            this.gradeLabel.BackColor = System.Drawing.Color.Black;
+            this.gradeLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gradeLabel.ForeColor = System.Drawing.Color.White;
+            this.gradeLabel.Location = new System.Drawing.Point(305, 188);
+            this.gradeLabel.Name = "gradeLabel";
+            this.gradeLabel.Size = new System.Drawing.Size(80, 16);
+            this.gradeLabel.TabIndex = 7;
+            this.gradeLabel.Text = "账户等级:";
             // 
-            // AccountBank
+            // accountBank
             // 
-            this.AccountBank.AutoSize = true;
-            this.AccountBank.BackColor = System.Drawing.Color.Black;
-            this.AccountBank.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AccountBank.ForeColor = System.Drawing.Color.White;
-            this.AccountBank.Location = new System.Drawing.Point(170, 130);
-            this.AccountBank.Name = "AccountBank";
-            this.AccountBank.Size = new System.Drawing.Size(104, 16);
-            this.AccountBank.TabIndex = 8;
-            this.AccountBank.Text = "中国建设银行";
+            this.accountBank.AutoSize = true;
+            this.accountBank.BackColor = System.Drawing.Color.Black;
+            this.accountBank.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountBank.ForeColor = System.Drawing.Color.White;
+            this.accountBank.Location = new System.Drawing.Point(170, 130);
+            this.accountBank.Name = "accountBank";
+            this.accountBank.Size = new System.Drawing.Size(104, 16);
+            this.accountBank.TabIndex = 8;
+            this.accountBank.Text = "中国建设银行";
             // 
-            // label10
+            // accountType
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(393, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 16);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "是";
+            this.accountType.AutoSize = true;
+            this.accountType.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.accountType.ForeColor = System.Drawing.Color.White;
+            this.accountType.Location = new System.Drawing.Point(428, 118);
+            this.accountType.Name = "accountType";
+            this.accountType.Size = new System.Drawing.Size(24, 16);
+            this.accountType.TabIndex = 9;
+            this.accountType.Text = "是";
             // 
-            // label11
+            // balance
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
-            this.label11.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(180, 188);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(40, 16);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "4700";
+            this.balance.AutoSize = true;
+            this.balance.BackColor = System.Drawing.Color.Black;
+            this.balance.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.balance.ForeColor = System.Drawing.Color.Green;
+            this.balance.Location = new System.Drawing.Point(180, 188);
+            this.balance.Name = "balance";
+            this.balance.Size = new System.Drawing.Size(40, 16);
+            this.balance.TabIndex = 10;
+            this.balance.Text = "4700";
             // 
-            // label12
+            // grade
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(398, 188);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 16);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "钻石账户";
+            this.grade.AutoSize = true;
+            this.grade.BackColor = System.Drawing.Color.Black;
+            this.grade.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grade.ForeColor = System.Drawing.Color.White;
+            this.grade.Location = new System.Drawing.Point(397, 176);
+            this.grade.Name = "grade";
+            this.grade.Size = new System.Drawing.Size(72, 16);
+            this.grade.TabIndex = 11;
+            this.grade.Text = "钻石账户";
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(38, 34);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 192);
-            this.panel1.TabIndex = 12;
+            this.panel.BackColor = System.Drawing.Color.Black;
+            this.panel.Controls.Add(this.accountType);
+            this.panel.Controls.Add(this.grade);
+            this.panel.Controls.Add(this.accountName);
+            this.panel.Location = new System.Drawing.Point(12, 12);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(561, 237);
+            this.panel.TabIndex = 12;
+            // 
+            // deposit
+            // 
+            this.deposit.BackColor = System.Drawing.Color.White;
+            this.deposit.FlatAppearance.BorderSize = 0;
+            this.deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deposit.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.deposit.Location = new System.Drawing.Point(38, 266);
+            this.deposit.Margin = new System.Windows.Forms.Padding(0);
+            this.deposit.Name = "deposit";
+            this.deposit.Size = new System.Drawing.Size(75, 23);
+            this.deposit.TabIndex = 13;
+            this.deposit.Text = "存入";
+            this.deposit.UseVisualStyleBackColor = false;
+            // 
+            // withdraw
+            // 
+            this.withdraw.BackColor = System.Drawing.Color.White;
+            this.withdraw.FlatAppearance.BorderSize = 0;
+            this.withdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.withdraw.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.withdraw.Location = new System.Drawing.Point(183, 266);
+            this.withdraw.Margin = new System.Windows.Forms.Padding(0);
+            this.withdraw.Name = "withdraw";
+            this.withdraw.Size = new System.Drawing.Size(75, 23);
+            this.withdraw.TabIndex = 14;
+            this.withdraw.Text = "取出";
+            this.withdraw.UseVisualStyleBackColor = false;
+            // 
+            // transfer
+            // 
+            this.transfer.BackColor = System.Drawing.Color.White;
+            this.transfer.FlatAppearance.BorderSize = 0;
+            this.transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.transfer.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.transfer.Location = new System.Drawing.Point(333, 266);
+            this.transfer.Margin = new System.Windows.Forms.Padding(0);
+            this.transfer.Name = "transfer";
+            this.transfer.Size = new System.Drawing.Size(75, 23);
+            this.transfer.TabIndex = 15;
+            this.transfer.Text = "转账";
+            this.transfer.UseVisualStyleBackColor = false;
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Crimson;
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(477, 266);
+            this.exit.Margin = new System.Windows.Forms.Padding(0);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(75, 23);
+            this.exit.TabIndex = 16;
+            this.exit.Text = "退出账户";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // AccountBoard
             // 
@@ -204,27 +269,30 @@ namespace ATM.Forms
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(585, 310);
             this.ControlBox = false;
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.AccountBank);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.AccountBankLabel);
-            this.Controls.Add(this.AccountName);
-            this.Controls.Add(this.AccountID);
-            this.Controls.Add(this.AccountNameLabel);
-            this.Controls.Add(this.AccountIDLabel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.transfer);
+            this.Controls.Add(this.withdraw);
+            this.Controls.Add(this.deposit);
+            this.Controls.Add(this.balance);
+            this.Controls.Add(this.accountBank);
+            this.Controls.Add(this.gradeLabel);
+            this.Controls.Add(this.balanceLabel);
+            this.Controls.Add(this.accountTypeLabel);
+            this.Controls.Add(this.accountBankLabel);
+            this.Controls.Add(this.accountID);
+            this.Controls.Add(this.accountNameLabel);
+            this.Controls.Add(this.accountIDLabel);
+            this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AccountBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountBoard";
             this.Load += new System.EventHandler(this.AccountBoard_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,18 +300,22 @@ namespace ATM.Forms
 
         #endregion
 
-        private System.Windows.Forms.Label AccountIDLabel;
-        private System.Windows.Forms.Label AccountNameLabel;
-        private System.Windows.Forms.Label AccountID;
-        private System.Windows.Forms.Label AccountName;
-        private System.Windows.Forms.Label AccountBankLabel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label AccountBank;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label accountIDLabel;
+        private System.Windows.Forms.Label accountNameLabel;
+        private System.Windows.Forms.Label accountID;
+        private System.Windows.Forms.Label accountName;
+        private System.Windows.Forms.Label accountBankLabel;
+        private System.Windows.Forms.Label accountTypeLabel;
+        private System.Windows.Forms.Label balanceLabel;
+        private System.Windows.Forms.Label gradeLabel;
+        private System.Windows.Forms.Label accountBank;
+        private System.Windows.Forms.Label accountType;
+        private System.Windows.Forms.Label balance;
+        private System.Windows.Forms.Label grade;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button deposit;
+        private System.Windows.Forms.Button withdraw;
+        private System.Windows.Forms.Button transfer;
+        private System.Windows.Forms.Button exit;
     }
 }
