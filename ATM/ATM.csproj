@@ -54,6 +54,12 @@
     <Compile Include="Forms\AccountBoard.Designer.cs">
       <DependentUpon>AccountBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Utils\GetValue.cs" />
     <EmbeddedResource Include="Forms\AccountBoard.resx">
       <DependentUpon>AccountBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ForgetPassword.resx">
       <DependentUpon>ForgetPassword.cs</DependentUpon>
