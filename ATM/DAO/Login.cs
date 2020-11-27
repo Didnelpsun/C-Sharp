@@ -12,9 +12,7 @@ namespace ATM
         {
             SqlConnection conn = DAO.Connection();
             // 查询账户是否存在
-            string queryUser = "SELECT UserID FROM [User] WHERE UserName=N'" + user.UserName + "'";
-            // 查询账户密码是否一致
-            string queryPass = "SELECT UserID FROM [User] WHERE UserName=N'" + user.UserName + "'AND Password='" + user.Password + "'";
+            string queryUser = "SELECT UserID, Password FROM [User] WHERE UserName=N'" + user.UserName + "'";
             try
             {
                 // 打开数据链接
@@ -26,35 +24,28 @@ namespace ATM
                 command.CommandText = queryUser;
                 // 读取对应的结果集
                 SqlDataReader reader = command.ExecuteReader();
-                if (!reader.Read())
+                if (reader.HasRows)
                 {
-                    reader.Close();
-                    conn.Close();
-                    user.UserId = "1";
+                    while (reader.Read())
+                    {
+                        //Console.WriteLine(reader["UserID"]);
+                        if (reader["Password"].ToString().CompareTo(user.Password) == 0)
+                        {
+                            user.UserId = reader["UserID"].ToString();
+                            return;
+                        }
+                        else
+                        {
+                            user.UserId = "2";
+                        }
+                    }
                 }
                 else
                 {
-                    // 关闭上一个读取
-                    reader.Close();
-                    // 验证密码
-                    command.CommandText = queryPass;
-                    //Console.WriteLine("检查用户名{0}密码是否正确...", user.UserName);
-                    reader = command.ExecuteReader();
-                    if (!reader.Read())
-                    {
-                        reader.Close();
-                        conn.Close();
-                        user.UserId = "2";
-
-                    }
-                    else
-                    {
-                        user.UserId = reader["UserID"].ToString();
-                        reader.Close();
-                        conn.Close();
-                    }
-
+                    user.UserId = "1";
                 }
+                reader.Close();
+                conn.Close();
             }
             catch(Exception e)
             {

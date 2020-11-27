@@ -115,6 +115,7 @@ namespace ATM.Forms
             // forgetPsw
             // 
             this.forgetPsw.AutoSize = true;
+            this.forgetPsw.Font = new System.Drawing.Font("楷体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.forgetPsw.ForeColor = System.Drawing.Color.White;
             this.forgetPsw.Location = new System.Drawing.Point(403, 245);
             this.forgetPsw.Name = "forgetPsw";
