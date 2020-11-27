@@ -13,15 +13,15 @@ namespace ATM.Forms
         }
         private void TextBoxUser_TextChanged(object sender, EventArgs e)
         {
-            user.UserName = textBoxUser.Text.ToString();
+            user.UserName = textBoxUser.Text.ToString().Trim();
         }
         private void TextBoxPsw_TextChanged(object sender, EventArgs e)
         {
-            user.Password = textBoxPsw.Text.ToString();
+            user.Password = textBoxPsw.Text.ToString().Trim();
         }
         private void Login_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("户名{0}是在...", user.UserName);
+            //Console.WriteLine("户名{0}是在...", user.UserName);
             DAO.Login(user);
             switch (user.UserId){
                 case "1":

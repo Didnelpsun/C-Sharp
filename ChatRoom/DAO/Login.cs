@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using ATM.Object;
+using ChatRoom.Object;
 
-namespace ATM
+namespace ChatRoom
 {
     partial class DAO
     {
@@ -12,9 +12,9 @@ namespace ATM
         {
             SqlConnection conn = DAO.Connection();
             // 查询账户是否存在
-            string queryUser = "SELECT UserID FROM [User] WHERE UserName=N'" + user.UserName + "'";
+            string queryUser = "SELECT UserID FROM [User] WHERE UserName='" + user.UserName + "'";
             // 查询账户密码是否一致
-            string queryPass = "SELECT UserID FROM [User] WHERE UserName=N'" + user.UserName + "'AND Password='" + user.Password + "'";
+            string queryPass = "SELECT UserID FROM [User] WHERE UserName='" + user.UserName + "'AND Password='" + user.Password + "'";
             try
             {
                 // 打开数据链接
@@ -30,7 +30,7 @@ namespace ATM
                 {
                     reader.Close();
                     conn.Close();
-                    user.UserId = "1";
+                    user.UserID = "1";
                 }
                 else
                 {
@@ -44,12 +44,12 @@ namespace ATM
                     {
                         reader.Close();
                         conn.Close();
-                        user.UserId = "2";
+                        user.UserID = "2";
 
                     }
                     else
                     {
-                        user.UserId = reader["UserID"].ToString();
+                        user.UserID = reader["UserID"].ToString();
                         reader.Close();
                         conn.Close();
                     }
@@ -59,7 +59,7 @@ namespace ATM
             catch(Exception e)
             {
                 Debug.WriteLine(e.Message.ToString());
-                user.UserId = "3";
+                user.UserID = "3";
             }
         }
     }

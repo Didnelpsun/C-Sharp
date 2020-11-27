@@ -20,19 +20,19 @@ namespace ATM.Forms
             InitializeComponent();
         }
 
-        private void Cancel_Click(object sender, EventArgs e)
-        {
-            Visible = false;
-            Main main = new Main();
-            main.Show();
-        }
-
         private void ForgetPassword_Load(object sender, EventArgs e)
         {
             IDLabel.Text = "";
             nameLabel.Text = "";
             newLabel.Text = "";
             confirmLabel.Text = "";
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            Main main = new Main();
+            main.Show();
         }
 
         private void Change_Click(object sender, EventArgs e)

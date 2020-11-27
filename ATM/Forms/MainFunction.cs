@@ -51,7 +51,16 @@ namespace ATM.Forms
 
         private void ChangePass_Click(object sender, EventArgs e)
         {
+            Visible = false;
+            ChangePassword changePassword = new ChangePassword(user);
+            changePassword.Show();
+        }
 
+        private void ChangeUserName_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            ChangeUserName changeUserName = new ChangeUserName(user);
+            changeUserName.Show();
         }
     }
 }

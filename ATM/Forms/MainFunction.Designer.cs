@@ -31,7 +31,7 @@ namespace ATM.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFunction));
             this.changePass = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.changeUserName = new System.Windows.Forms.Button();
             this.AddAccountButton = new System.Windows.Forms.Button();
             this.accountView = new System.Windows.Forms.DataGridView();
             this.logout = new System.Windows.Forms.Button();
@@ -53,19 +53,20 @@ namespace ATM.Forms
             this.changePass.UseVisualStyleBackColor = false;
             this.changePass.Click += new System.EventHandler(this.ChangePass_Click);
             // 
-            // button5
+            // changeUserName
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(312, 266);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "用户名修改";
-            this.button5.UseVisualStyleBackColor = false;
+            this.changeUserName.BackColor = System.Drawing.Color.White;
+            this.changeUserName.FlatAppearance.BorderSize = 0;
+            this.changeUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeUserName.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.changeUserName.Location = new System.Drawing.Point(312, 266);
+            this.changeUserName.Margin = new System.Windows.Forms.Padding(0);
+            this.changeUserName.Name = "changeUserName";
+            this.changeUserName.Size = new System.Drawing.Size(89, 23);
+            this.changeUserName.TabIndex = 4;
+            this.changeUserName.Text = "用户名修改";
+            this.changeUserName.UseVisualStyleBackColor = false;
+            this.changeUserName.Click += new System.EventHandler(this.ChangeUserName_Click);
             // 
             // AddAccountButton
             // 
@@ -118,7 +119,7 @@ namespace ATM.Forms
             this.Controls.Add(this.logout);
             this.Controls.Add(this.accountView);
             this.Controls.Add(this.AddAccountButton);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.changeUserName);
             this.Controls.Add(this.changePass);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -135,7 +136,7 @@ namespace ATM.Forms
         #endregion
 
         private System.Windows.Forms.Button changePass;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button changeUserName;
         private System.Windows.Forms.Button AddAccountButton;
         private System.Windows.Forms.DataGridView accountView;
         private System.Windows.Forms.Button logout;
