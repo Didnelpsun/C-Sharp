@@ -32,7 +32,7 @@ namespace ATM.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFunction));
             this.changePass = new System.Windows.Forms.Button();
             this.changeUserName = new System.Windows.Forms.Button();
-            this.AddAccountButton = new System.Windows.Forms.Button();
+            this.addAccount = new System.Windows.Forms.Button();
             this.accountView = new System.Windows.Forms.DataGridView();
             this.logout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.accountView)).BeginInit();
@@ -68,19 +68,19 @@ namespace ATM.Forms
             this.changeUserName.UseVisualStyleBackColor = false;
             this.changeUserName.Click += new System.EventHandler(this.ChangeUserName_Click);
             // 
-            // AddAccountButton
+            // addAccount
             // 
-            this.AddAccountButton.BackColor = System.Drawing.Color.White;
-            this.AddAccountButton.FlatAppearance.BorderSize = 0;
-            this.AddAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddAccountButton.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AddAccountButton.Location = new System.Drawing.Point(46, 266);
-            this.AddAccountButton.Margin = new System.Windows.Forms.Padding(0);
-            this.AddAccountButton.Name = "AddAccountButton";
-            this.AddAccountButton.Size = new System.Drawing.Size(75, 23);
-            this.AddAccountButton.TabIndex = 5;
-            this.AddAccountButton.Text = "新增账户";
-            this.AddAccountButton.UseVisualStyleBackColor = false;
+            this.addAccount.BackColor = System.Drawing.Color.White;
+            this.addAccount.FlatAppearance.BorderSize = 0;
+            this.addAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addAccount.Font = new System.Drawing.Font("楷体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.addAccount.Location = new System.Drawing.Point(46, 266);
+            this.addAccount.Margin = new System.Windows.Forms.Padding(0);
+            this.addAccount.Name = "addAccount";
+            this.addAccount.Size = new System.Drawing.Size(75, 23);
+            this.addAccount.TabIndex = 5;
+            this.addAccount.Text = "新增账户";
+            this.addAccount.UseVisualStyleBackColor = false;
             // 
             // accountView
             // 
@@ -118,7 +118,7 @@ namespace ATM.Forms
             this.ControlBox = false;
             this.Controls.Add(this.logout);
             this.Controls.Add(this.accountView);
-            this.Controls.Add(this.AddAccountButton);
+            this.Controls.Add(this.addAccount);
             this.Controls.Add(this.changeUserName);
             this.Controls.Add(this.changePass);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -137,7 +137,7 @@ namespace ATM.Forms
 
         private System.Windows.Forms.Button changePass;
         private System.Windows.Forms.Button changeUserName;
-        private System.Windows.Forms.Button AddAccountButton;
+        private System.Windows.Forms.Button addAccount;
         private System.Windows.Forms.DataGridView accountView;
         private System.Windows.Forms.Button logout;
     }
