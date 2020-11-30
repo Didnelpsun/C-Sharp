@@ -59,33 +59,57 @@ namespace ATM.Forms
                     }
                     else
                     {
-                        newLabel.Text = "";
-                        SqlConnection conn = DAO.Connection();
-                        string updateUserName = "UPDATE [User] SET UserName='" + NewUserName + "' WHERE UserID = '" + user.UserId + "'";
-                        //Console.WriteLine(updateUserName);
-                        try
+                        if(OldUserName == NewUserName)
                         {
-                            conn.Open();
-                            SqlCommand command = conn.CreateCommand();
-                            command.CommandText = updateUserName;
-                            int rows = command.ExecuteNonQuery();
-                            conn.Close();
-                            if (rows > 0)
+                            newLabel.Text = "新名不应与旧名一致！";
+                        }
+                        else
+                        {
+                            newLabel.Text = "";
+                            int status = DAO.CheckRepeatUserName(user.UserId,NewUserName);
+                            if (status == 0)
                             {
-                                MessageBox.Show("用户名更新成功！");
-                                Visible = false;
-                                MainFunction mainFunction = new MainFunction(user);
-                                mainFunction.Show();
+                                newLabel.Text = "";
+                                SqlConnection conn = DAO.Connection();
+                                string updateUserName = "UPDATE [User] SET UserName='" + NewUserName + "' WHERE UserID = '" + user.UserId + "'";
+                                //Console.WriteLine(updateUserName);
+                                try
+                                {
+                                    conn.Open();
+                                    SqlCommand command = conn.CreateCommand();
+                                    command.CommandText = updateUserName;
+                                    int rows = command.ExecuteNonQuery();
+                                    conn.Close();
+                                    if (rows > 0)
+                                    {
+                                        MessageBox.Show("用户名更新成功！");
+                                        Visible = false;
+                                        MainFunction mainFunction = new MainFunction(user);
+                                        mainFunction.Show();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("用户名更新失败！");
+                                    }
+                                }
+                                catch (Exception exception)
+                                {
+                                    Debug.WriteLine(exception.Message.ToString());
+                                    MessageBox.Show("程序出现错误！");
+                                }
+                            }
+                            else if (status == 2)
+                            {
+                                newLabel.Text = "新名重名！";
+                            }
+                            else if (status == 3)
+                            {
+                                newLabel.Text = "数据库中有重名数据！";
                             }
                             else
                             {
-                                MessageBox.Show("用户名更新失败！");
+                                newLabel.Text = "检查重名出错！";
                             }
-                        }
-                        catch (Exception exception)
-                        {
-                            Debug.WriteLine(exception.Message.ToString());
-                            MessageBox.Show("程序出现错误！");
                         }
                     }
                 }

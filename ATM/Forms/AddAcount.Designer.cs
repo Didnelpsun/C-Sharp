@@ -43,6 +43,7 @@ namespace ATM.Forms
             this.Name = "AddAcount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAcount";
+            this.Load += new System.EventHandler(this.AddAcount_Load);
             this.ResumeLayout(false);
 
         }

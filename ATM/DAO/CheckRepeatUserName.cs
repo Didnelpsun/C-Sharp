@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATM.Object;
+using System;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
@@ -11,7 +12,7 @@ namespace ATM
         {
             SqlConnection conn = DAO.Connection();
             // 查询账户是否存在
-            string queryUserName = "SELECT UserID FROM [User] WHERE UserName='" + userName + "'";
+            string queryUserName = "SELECT UserID, UserName FROM [User] WHERE UserName='" + userName + "'";
             try
             {
                 // 打开数据链接
@@ -30,25 +31,32 @@ namespace ATM
                 else
                 {
                     int rows = 0;
-                    string value = "";
+                    string id = "";
+                    string name = "";
                     while (reader.Read())
                     {
-                        value = reader["UserID"].ToString();
+                        id = reader["UserID"].ToString();
+                        name = reader["UserName"].ToString();
                         rows++;
                     }
+                    //Console.WriteLine(id);
                     if (rows == 1)
                     {
-                        if(value == userID)
+                        if(id == userID)
                         {
                             reader.Close();
                             conn.Close();
-                            return 2;
+                            return 1;
                         }
                         else
                         {
                             reader.Close();
                             conn.Close();
-                            return 3;
+                            if(name != userName)
+                            {
+                                return 0;
+                            }
+                            return 2;
                         }
                     }
                     else
@@ -65,5 +73,9 @@ namespace ATM
                 return 4;
             }
         }
+        //public static int CheckRepeatUserName(User user)
+        //{
+        //    return CheckRepeatUserName(user.UserId, user.UserName);
+        //}
     }
 }

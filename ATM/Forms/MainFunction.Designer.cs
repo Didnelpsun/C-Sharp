@@ -81,6 +81,7 @@ namespace ATM.Forms
             this.addAccount.TabIndex = 5;
             this.addAccount.Text = "新增账户";
             this.addAccount.UseVisualStyleBackColor = false;
+            this.addAccount.Click += new System.EventHandler(this.AddAccount_Click);
             // 
             // accountView
             // 

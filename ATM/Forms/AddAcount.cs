@@ -1,20 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ATM.Object;
 
 namespace ATM.Forms
 {
     public partial class AddAcount : Form
     {
-        public AddAcount()
+        private User user;
+        public AddAcount(User user)
         {
             InitializeComponent();
+            this.user = user;
+        }
+
+        private void AddAcount_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

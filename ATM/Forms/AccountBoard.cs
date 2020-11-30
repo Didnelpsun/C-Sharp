@@ -20,9 +20,9 @@ namespace ATM.Forms
 
         private void AccountBoard_Load(object sender, EventArgs e)
         {
-            accountID.Text = account.AccountID.ToString().Trim();
-            accountName.Text = account.AccountName.ToString().Trim();
-            accountBank.Text = account.AccountBank.ToString().Trim();
+            accountID.Text = account.AccountID.Trim();
+            accountName.Text = account.AccountName.Trim();
+            accountBank.Text = DAO.GetBankName(account.AccountBank.Trim());
             if (account.AccountType)
             {
                 accountType.Text = "是";

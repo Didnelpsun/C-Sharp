@@ -62,5 +62,12 @@ namespace ATM.Forms
             ChangeUserName changeUserName = new ChangeUserName(user);
             changeUserName.Show();
         }
+
+        private void AddAccount_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            AddAcount addAccount = new AddAcount(user);
+            addAccount.Show();
+        }
     }
 }
