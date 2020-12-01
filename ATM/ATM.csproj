@@ -47,9 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\CheckRepeatUserName.cs" />
+    <Compile Include="DAO\GetBankList.cs" />
     <Compile Include="DAO\GetBankName.cs" />
     <Compile Include="DAO\GetGradeName.cs" />
     <Compile Include="DAO\CheckUser.cs" />
+    <Compile Include="Forms\AccessBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccessBoard.Designer.cs">
+      <DependentUpon>AccessBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AccountBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
     <Compile Include="Object\User.cs" />
     <Compile Include="Utils\CheckValue.cs" />
     <Compile Include="Utils\GetValue.cs" />
+    <EmbeddedResource Include="Forms\AccessBoard.resx">
+      <DependentUpon>AccessBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AccountBoard.resx">
       <DependentUpon>AccountBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,14 +156,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\exit.png" />
+    <Folder Include="Control\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\user.png" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -71,7 +71,7 @@ namespace ATM.Forms
                             {
                                 newLabel.Text = "";
                                 SqlConnection conn = DAO.Connection();
-                                string updateUserName = "UPDATE [User] SET UserName='" + NewUserName + "' WHERE UserID = '" + user.UserId + "'";
+                                string updateUserName = "UPDATE [User] SET UserName=N'" + NewUserName + "' WHERE UserID = '" + user.UserId + "'";
                                 //Console.WriteLine(updateUserName);
                                 try
                                 {

@@ -12,7 +12,7 @@ namespace ATM
         {
             SqlConnection conn = DAO.Connection();
             // 查询对应ID下的多个账户
-            string queryAccount = "SELECT AccountID, AccountName, AccountBank, AccountType, Balance, Grade FROM [Account] WHERE UserID ='" + user.UserId + "'";
+            string queryAccount = "SELECT AccountID, AccountName, AccountBank, AccountType, Balance, Grade, Flow FROM [Account] WHERE UserID ='" + user.UserId + "'";
             try
             {
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(queryAccount, conn);

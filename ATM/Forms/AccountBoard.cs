@@ -22,7 +22,7 @@ namespace ATM.Forms
         {
             accountID.Text = account.AccountID.Trim();
             accountName.Text = account.AccountName.Trim();
-            accountBank.Text = DAO.GetBankName(account.AccountBank.Trim());
+            accountBank.Text = DAO.GetBankName(account.AccountBank);
             if (account.AccountType)
             {
                 accountType.Text = "是";
@@ -37,6 +37,7 @@ namespace ATM.Forms
             }
             balance.Text = account.Balance.ToString();
             grade.Text = DAO.GetGradeName(account.Grade);
+            flow.Text = account.Flow.ToString();
         }
 
         private void Exit_Click(object sender, EventArgs e)
@@ -45,6 +46,26 @@ namespace ATM.Forms
             Visible = false;
             MainFunction mainFunction = new MainFunction(user);
             mainFunction.Show();
+        }
+
+        private void Deposit_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            AccessBoard accessBoard = new AccessBoard(account, true);
+            accessBoard.Show();
+        }
+
+        private void Withdraw_Click(object sender, EventArgs e)
+        {
+
+            Visible = false;
+            AccessBoard accessBoard = new AccessBoard(account, false);
+            accessBoard.Show();
+        }
+
+        private void Transfer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

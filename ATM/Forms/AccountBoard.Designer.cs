@@ -43,6 +43,8 @@ namespace ATM.Forms
             this.balance = new System.Windows.Forms.Label();
             this.grade = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.flow = new System.Windows.Forms.Label();
+            this.flowLabel = new System.Windows.Forms.Label();
             this.deposit = new System.Windows.Forms.Button();
             this.withdraw = new System.Windows.Forms.Button();
             this.transfer = new System.Windows.Forms.Button();
@@ -56,7 +58,7 @@ namespace ATM.Forms
             this.accountIDLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountIDLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountIDLabel.ForeColor = System.Drawing.Color.Black;
-            this.accountIDLabel.Location = new System.Drawing.Point(75, 69);
+            this.accountIDLabel.Location = new System.Drawing.Point(67, 46);
             this.accountIDLabel.Name = "accountIDLabel";
             this.accountIDLabel.Size = new System.Drawing.Size(72, 16);
             this.accountIDLabel.TabIndex = 0;
@@ -68,7 +70,7 @@ namespace ATM.Forms
             this.accountNameLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountNameLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountNameLabel.ForeColor = System.Drawing.Color.Black;
-            this.accountNameLabel.Location = new System.Drawing.Point(309, 57);
+            this.accountNameLabel.Location = new System.Drawing.Point(326, 46);
             this.accountNameLabel.Name = "accountNameLabel";
             this.accountNameLabel.Size = new System.Drawing.Size(72, 16);
             this.accountNameLabel.TabIndex = 1;
@@ -80,7 +82,7 @@ namespace ATM.Forms
             this.accountID.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountID.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountID.ForeColor = System.Drawing.Color.Black;
-            this.accountID.Location = new System.Drawing.Point(170, 69);
+            this.accountID.Location = new System.Drawing.Point(168, 46);
             this.accountID.Name = "accountID";
             this.accountID.Size = new System.Drawing.Size(88, 16);
             this.accountID.TabIndex = 2;
@@ -92,7 +94,7 @@ namespace ATM.Forms
             this.accountName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountName.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountName.ForeColor = System.Drawing.Color.Black;
-            this.accountName.Location = new System.Drawing.Point(387, 57);
+            this.accountName.Location = new System.Drawing.Point(404, 46);
             this.accountName.Name = "accountName";
             this.accountName.Size = new System.Drawing.Size(48, 16);
             this.accountName.TabIndex = 3;
@@ -104,7 +106,7 @@ namespace ATM.Forms
             this.accountBankLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountBankLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountBankLabel.ForeColor = System.Drawing.Color.Black;
-            this.accountBankLabel.Location = new System.Drawing.Point(63, 130);
+            this.accountBankLabel.Location = new System.Drawing.Point(67, 109);
             this.accountBankLabel.Name = "accountBankLabel";
             this.accountBankLabel.Size = new System.Drawing.Size(88, 16);
             this.accountBankLabel.TabIndex = 4;
@@ -116,7 +118,7 @@ namespace ATM.Forms
             this.accountTypeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountTypeLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountTypeLabel.ForeColor = System.Drawing.Color.Black;
-            this.accountTypeLabel.Location = new System.Drawing.Point(331, 118);
+            this.accountTypeLabel.Location = new System.Drawing.Point(60, 176);
             this.accountTypeLabel.Name = "accountTypeLabel";
             this.accountTypeLabel.Size = new System.Drawing.Size(120, 16);
             this.accountTypeLabel.TabIndex = 5;
@@ -128,7 +130,7 @@ namespace ATM.Forms
             this.balanceLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.balanceLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.balanceLabel.ForeColor = System.Drawing.Color.Black;
-            this.balanceLabel.Location = new System.Drawing.Point(91, 188);
+            this.balanceLabel.Location = new System.Drawing.Point(216, 176);
             this.balanceLabel.Name = "balanceLabel";
             this.balanceLabel.Size = new System.Drawing.Size(56, 16);
             this.balanceLabel.TabIndex = 6;
@@ -140,7 +142,7 @@ namespace ATM.Forms
             this.gradeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gradeLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gradeLabel.ForeColor = System.Drawing.Color.Black;
-            this.gradeLabel.Location = new System.Drawing.Point(309, 176);
+            this.gradeLabel.Location = new System.Drawing.Point(316, 109);
             this.gradeLabel.Name = "gradeLabel";
             this.gradeLabel.Size = new System.Drawing.Size(80, 16);
             this.gradeLabel.TabIndex = 7;
@@ -152,7 +154,7 @@ namespace ATM.Forms
             this.accountBank.BackColor = System.Drawing.Color.WhiteSmoke;
             this.accountBank.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountBank.ForeColor = System.Drawing.Color.Black;
-            this.accountBank.Location = new System.Drawing.Point(170, 130);
+            this.accountBank.Location = new System.Drawing.Point(168, 109);
             this.accountBank.Name = "accountBank";
             this.accountBank.Size = new System.Drawing.Size(104, 16);
             this.accountBank.TabIndex = 8;
@@ -163,7 +165,7 @@ namespace ATM.Forms
             this.accountType.AutoSize = true;
             this.accountType.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.accountType.ForeColor = System.Drawing.Color.Black;
-            this.accountType.Location = new System.Drawing.Point(463, 118);
+            this.accountType.Location = new System.Drawing.Point(168, 176);
             this.accountType.Name = "accountType";
             this.accountType.Size = new System.Drawing.Size(24, 16);
             this.accountType.TabIndex = 9;
@@ -175,7 +177,7 @@ namespace ATM.Forms
             this.balance.BackColor = System.Drawing.Color.WhiteSmoke;
             this.balance.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.balance.ForeColor = System.Drawing.Color.Green;
-            this.balance.Location = new System.Drawing.Point(180, 188);
+            this.balance.Location = new System.Drawing.Point(265, 176);
             this.balance.Name = "balance";
             this.balance.Size = new System.Drawing.Size(40, 16);
             this.balance.TabIndex = 10;
@@ -187,7 +189,7 @@ namespace ATM.Forms
             this.grade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.grade.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grade.ForeColor = System.Drawing.Color.Black;
-            this.grade.Location = new System.Drawing.Point(415, 176);
+            this.grade.Location = new System.Drawing.Point(404, 109);
             this.grade.Name = "grade";
             this.grade.Size = new System.Drawing.Size(72, 16);
             this.grade.TabIndex = 11;
@@ -196,16 +198,48 @@ namespace ATM.Forms
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel.Controls.Add(this.flow);
+            this.panel.Controls.Add(this.flowLabel);
             this.panel.Controls.Add(this.accountType);
             this.panel.Controls.Add(this.grade);
+            this.panel.Controls.Add(this.accountBankLabel);
+            this.panel.Controls.Add(this.accountBank);
             this.panel.Controls.Add(this.accountName);
             this.panel.Controls.Add(this.gradeLabel);
+            this.panel.Controls.Add(this.balance);
+            this.panel.Controls.Add(this.accountID);
             this.panel.Controls.Add(this.accountTypeLabel);
+            this.panel.Controls.Add(this.accountIDLabel);
             this.panel.Controls.Add(this.accountNameLabel);
+            this.panel.Controls.Add(this.balanceLabel);
             this.panel.Location = new System.Drawing.Point(12, 12);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(561, 237);
             this.panel.TabIndex = 12;
+            // 
+            // flow
+            // 
+            this.flow.AutoSize = true;
+            this.flow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flow.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flow.ForeColor = System.Drawing.Color.Black;
+            this.flow.Location = new System.Drawing.Point(440, 176);
+            this.flow.Name = "flow";
+            this.flow.Size = new System.Drawing.Size(48, 16);
+            this.flow.TabIndex = 17;
+            this.flow.Text = "35564";
+            // 
+            // flowLabel
+            // 
+            this.flowLabel.AutoSize = true;
+            this.flowLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.flowLabel.Font = new System.Drawing.Font("楷体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flowLabel.ForeColor = System.Drawing.Color.Black;
+            this.flowLabel.Location = new System.Drawing.Point(354, 176);
+            this.flowLabel.Name = "flowLabel";
+            this.flowLabel.Size = new System.Drawing.Size(80, 16);
+            this.flowLabel.TabIndex = 12;
+            this.flowLabel.Text = "账目流水:";
             // 
             // deposit
             // 
@@ -220,6 +254,7 @@ namespace ATM.Forms
             this.deposit.TabIndex = 13;
             this.deposit.Text = "存入";
             this.deposit.UseVisualStyleBackColor = false;
+            this.deposit.Click += new System.EventHandler(this.Deposit_Click);
             // 
             // withdraw
             // 
@@ -234,6 +269,7 @@ namespace ATM.Forms
             this.withdraw.TabIndex = 14;
             this.withdraw.Text = "取出";
             this.withdraw.UseVisualStyleBackColor = false;
+            this.withdraw.Click += new System.EventHandler(this.Withdraw_Click);
             // 
             // transfer
             // 
@@ -248,6 +284,7 @@ namespace ATM.Forms
             this.transfer.TabIndex = 15;
             this.transfer.Text = "转账";
             this.transfer.UseVisualStyleBackColor = false;
+            this.transfer.Click += new System.EventHandler(this.Transfer_Click);
             // 
             // exit
             // 
@@ -276,12 +313,6 @@ namespace ATM.Forms
             this.Controls.Add(this.transfer);
             this.Controls.Add(this.withdraw);
             this.Controls.Add(this.deposit);
-            this.Controls.Add(this.balance);
-            this.Controls.Add(this.accountBank);
-            this.Controls.Add(this.balanceLabel);
-            this.Controls.Add(this.accountBankLabel);
-            this.Controls.Add(this.accountID);
-            this.Controls.Add(this.accountIDLabel);
             this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -294,7 +325,6 @@ namespace ATM.Forms
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -317,5 +347,7 @@ namespace ATM.Forms
         private System.Windows.Forms.Button withdraw;
         private System.Windows.Forms.Button transfer;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Label flow;
+        private System.Windows.Forms.Label flowLabel;
     }
 }

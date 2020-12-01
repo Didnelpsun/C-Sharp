@@ -10,11 +10,12 @@ namespace ATM.Object
     {
         private string accountid;
         private string accountname;
-        private string accountbank;
+        private int accountbank;
         private bool accounttype;
         private float balance;
         private int grade;
         private string userid;
+        private float flow;
         public string AccountID
         {
             set
@@ -37,11 +38,11 @@ namespace ATM.Object
                 return accountname;
             }
         }
-        public string AccountBank
+        public int AccountBank
         {
             set
             {
-                accountbank = value.ToString();
+                accountbank = value;
             }
             get
             {
@@ -92,17 +93,29 @@ namespace ATM.Object
                 return userid;
             }
         }
+        public float Flow
+        {
+            set
+            {
+                flow = Convert.ToSingle(value);
+            }
+            get
+            {
+                return flow;
+            }
+        }
         public Account()
         {
             accountid = null;
             accountname = null;
-            accountbank = null;
+            accountbank = 0;
             accounttype = false;
             balance = 0;
             grade = 0;
             userid = null;
+            flow = 0;
         }
-        public Account(string id, string name, string bank, bool type, float bal, int g, string uid)
+        public Account(string id, string name, int bank, bool type, float bal, int g, string uid, float fl)
         {
             accountid = id;
             accountname = name;
@@ -111,6 +124,7 @@ namespace ATM.Object
             balance = bal;
             grade = g;
             userid = uid;
+            flow = fl;
         }
     }
 }
