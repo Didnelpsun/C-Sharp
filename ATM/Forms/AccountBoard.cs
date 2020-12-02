@@ -22,7 +22,7 @@ namespace ATM.Forms
         {
             accountID.Text = account.AccountID.Trim();
             accountName.Text = account.AccountName.Trim();
-            accountBank.Text = DAO.GetBankName(account.AccountBank);
+            accountBank.Text = DAO.GetBankName(account.AccountBank).Trim();
             if (account.AccountType)
             {
                 accountType.Text = "是";
@@ -36,7 +36,7 @@ namespace ATM.Forms
                 this.balance.ForeColor = System.Drawing.Color.Red;
             }
             balance.Text = account.Balance.ToString();
-            grade.Text = DAO.GetGradeName(account.Grade);
+            grade.Text = DAO.GetGradeName(account.Grade).Trim();
             flow.Text = account.Flow.ToString();
         }
 
